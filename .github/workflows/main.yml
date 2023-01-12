@@ -14,10 +14,9 @@ jobs:
         run: |
           npm ci
           npm run build
-          mv .svelte-kit/output/client/* .svelte-kit/output/prerendered/pages
-          touch .svelte-kit/output/prerendered/pages/.nojekyll
+          touch build/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .svelte-kit/output/prerendered/pages # The folder the action should deploy.
+          folder: build # The folder the action should deploy.

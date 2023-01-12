@@ -30,7 +30,7 @@
 
     const JUMP_KEY = "Space"
     const CROUCH_KEYS = ["KeyC", "KeyV"]
-    const MAX_TIME_BETWEEN_INPUTS = 100
+    const MAX_TIME_BETWEEN_INPUTS = 6.5
 
     let firstInput: string | false = false;
     let startTime = 0
