@@ -14,9 +14,9 @@ jobs:
         run: |
           npm ci
           npm run build
-          mv .svelte-kit/output/client/* .svelte-kit/output/pages
+          mv .svelte-kit/output/client/* .svelte-kit/output/prerendered/pages
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .svelte-kit/output/pages # The folder the action should deploy.
+          folder: .svelte-kit/output/prerendered/pages # The folder the action should deploy.
